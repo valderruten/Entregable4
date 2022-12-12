@@ -1,0 +1,33 @@
+.form-container{
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0004;
+  z-index: 1;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter:blur(8px);
+}
+.close__form{
+  transform: translate(-100%);
+}
+
+.App__btn{
+  font-size: 1.5rem;
+  color:white;
+  background-color: #555a88;
+  padding: 0.5em 2em ;
+}
+.user-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,300px);
+  width: 100%;
+  max-width: 1200px;
+  gap: 2em;
+  justify-content: center;
+   margin-left: auto;
+  margin-right: auto;
+  padding: 3em;
+}
