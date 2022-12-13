@@ -45,7 +45,18 @@ const UsersForm = ({
      return (
     
     <form autoComplete="off" className="form" onSubmit={handleSubmit(submit)}>
-      <div onClick={() => setCloseForm(true)} className="form__x">
+      <div onClick={() => {
+        setCloseForm(true)
+        setUpdateInfo()
+        reset({
+          email: "",
+          last_name: "",
+          first_name: "",
+          password: "",
+          birthday: "",
+        });
+        
+      }} className="form__x">
         ❌
       </div>
       <h2 className="form__title">
@@ -148,7 +159,7 @@ const UsersForm = ({
         <label className="form__label" htmlFor="birthday">
           Birthday
         </label>
-        <input
+        <input   
           className="form__input"
           type="date"   max={fecMax} 
           id="birthday"

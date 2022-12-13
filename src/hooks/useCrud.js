@@ -58,15 +58,16 @@ const useCrud = () => {
   const updateUserById = (id, data) => {
     const URL = `https://users-crud.academlo.tech/users/${id}/`;
     axios
-      .put(URL, data)
+      .patch(URL, data)
       .then(
-        (res) => getAllUsers(),
+        (res) =>{ getAllUsers(),
         swal.fire({
           title: "Updating Successful!",
           text: "The user was successfully updated!",
           icon: "success",
           button: "OK",
         })
+      }
       )
       .catch((err) => console.log(err));
   };

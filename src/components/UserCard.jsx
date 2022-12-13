@@ -1,10 +1,9 @@
 import React from "react";
-import App from "../App";
 import "./styles/userCard.css";
 
 const UserCard = ({ user, deleteUserById, setUpdateInfo, setCloseForm }) => {
   const handleEdit = () => {
-    setCloseForm, setUpdateInfo(user);
+    setCloseForm(false), setUpdateInfo(user);
   };
   return (
     <article className="card">
@@ -20,10 +19,7 @@ const UserCard = ({ user, deleteUserById, setUpdateInfo, setCloseForm }) => {
         </li>
       </ul>
       <footer className="card__footer">
-        {/* <button className="card__btn card__btn__trash" onClick={()=>deleteUserById(user.id)}><i className="fa-solid fa-trash-arrow-up"></i>
-        </button> */}
-
-        <button
+               <button
           className="card__btn card__btn__trash"
           onClick={() => deleteUserById(user.id)}
         >
